@@ -18,6 +18,7 @@
 //
 
 import PerfectLib
+import SQLite
 
 // Server only extensions
 extension User {

@@ -65,7 +65,7 @@ class AuthenticatingHandler: PageHandler {
 			
 			if self.authenticatedUser == nil {
 				
-				let nonce = SessionManager.generateSessionKey()
+				let nonce = String.fromUUID(random_uuid())
 				let headerValue = "Digest realm=\"\(AUTH_REALM)\", qop=\"auth\", nonce=\"\(nonce)\", uri=\"\(request.requestURI)\", algorithm=\"md5\""
 								
 				response.setStatus(401, message: "Unauthorized")

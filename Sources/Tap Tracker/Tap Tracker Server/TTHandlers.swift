@@ -19,6 +19,7 @@
 
 
 import PerfectLib
+import SQLite
 
 // This is the function which all Perfect Server modules must expose.
 // The system will load the module and call this function.
@@ -54,7 +55,7 @@ class TTHandler: PageHandler { // all template handlers must inherit from PageHa
 
 	static var trackerDbPath: String {
 			// Full path to the SQLite database in which we store our tracking data.
-		let dbPath = PerfectServer.staticPerfectServer.homeDir() + serverSQLiteDBs + "TapTrackerDb"
+		let dbPath = PerfectServer.staticPerfectServer.homeDir() + "SQLiteDBs/TapTrackerDb"
 		return dbPath
 	}
 
