@@ -15,11 +15,11 @@ After cloning the repository or downloading and expanding the zip file, navigate
 
 Perfect Server HTTP Settings:
 
-![Dev HTTP Window](../SiteAssets/perfect_dev_http_window.png)
+![Dev HTTP Window](SiteAssets/perfect_dev_http_window.png)
 
 Example end point in source code:
 
-![End Point Edit](../SiteAssets/end_point_edit.png)
+![End Point Edit](SiteAssets/end_point_edit.png)
 
 ## Linux Build Notes
 First, ensure you have built [PerfectLib](../PerfectLib/#perfectlib) and [Perfect Server](../PerfectServer/#perfectserver).
