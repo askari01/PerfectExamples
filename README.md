@@ -1,6 +1,9 @@
 # Perfect Examples
 ![Perfect logo](https://www.perfect.org/images/icon_128x128.png)
 
+This repository is still in flux as we finalize support for Swift Package manager.
+**Download [release-1.0](https://github.com/PerfectlySoft/Perfect/releases/tag/v1.0.0) if you are using Xcode 7.3 with Swift 2.2.**
+
 These examples illustrate how Xcode projects which use Perfect are organized and how the clients and servers are run and debugged. Each example aims to show a different aspect of how Perfect operates with the goal of getting developers up to speed and creating their own server solutions.
 
 * [Getting Started](#getting-started)
