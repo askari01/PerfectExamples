@@ -46,10 +46,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F883804E1BEBE57A00508D7F"
-            BuildableName = "Upload Enumerator Server.framework"
-            BlueprintName = "Upload Enumerator Server"
-            ReferencedContainer = "container:Upload Enumerator.xcodeproj">
+            BlueprintIdentifier = "F8E752DE1BDA8A7600BFC36A"
+            BuildableName = "perfectserverhttp"
+            BlueprintName = "PerfectServer HTTP"
+            ReferencedContainer = "container:../../../PerfectServer/Xcode/PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F88B06801BDD48DD001FD0CD"
-            BuildableName = "PerfectServer HTTP.app"
-            BlueprintName = "PerfectServer HTTP App"
-            ReferencedContainer = "container:../../PerfectServer/PerfectServer.xcodeproj">
+            BlueprintIdentifier = "F8E752DE1BDA8A7600BFC36A"
+            BuildableName = "perfectserverhttp"
+            BlueprintName = "PerfectServer HTTP"
+            ReferencedContainer = "container:../../../PerfectServer/Xcode/PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

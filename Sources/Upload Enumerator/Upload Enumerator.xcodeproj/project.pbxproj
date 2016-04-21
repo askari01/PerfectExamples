@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80D5B741CC873D50025AD97 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D5B731CC873D50025AD97 /* PerfectLib.framework */; };
 		F88380531BEBE57A00508D7F /* Upload Enumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = F88380521BEBE57A00508D7F /* Upload Enumerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F883805B1BEBE8D500508D7F /* UploadHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883805A1BEBE8D500508D7F /* UploadHandler.swift */; };
-		F883805D1BEBEA7F00508D7F /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F883805C1BEBEA7F00508D7F /* PerfectLib.framework */; };
 		F88380601BEBEB2A00508D7F /* index.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F883805F1BEBEB2A00508D7F /* index.mustache */; };
 		F88380621BEBEC6000508D7F /* index.mustache in CopyFiles */ = {isa = PBXBuildFile; fileRef = F883805F1BEBEB2A00508D7F /* index.mustache */; };
 /* End PBXBuildFile section */
@@ -28,11 +28,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F80D5B731CC873D50025AD97 /* PerfectLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PerfectLib.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Perfect-aqyqkcamromvnnennplcqudglcko/Build/Products/Debug/PerfectLib.framework"; sourceTree = "<group>"; };
 		F883804F1BEBE57A00508D7F /* Upload Enumerator Server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Upload Enumerator Server.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88380521BEBE57A00508D7F /* Upload Enumerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Upload Enumerator.h"; sourceTree = "<group>"; };
 		F88380541BEBE57A00508D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F883805A1BEBE8D500508D7F /* UploadHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadHandler.swift; sourceTree = "<group>"; };
-		F883805C1BEBEA7F00508D7F /* PerfectLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PerfectLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Examples-ebfeivyuaxcjnrhcezzfamsblphw/Build/Products/Debug/PerfectLib.framework"; sourceTree = "<group>"; };
 		F883805F1BEBEB2A00508D7F /* index.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.mustache; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F883805D1BEBEA7F00508D7F /* PerfectLib.framework in Frameworks */,
+				F80D5B741CC873D50025AD97 /* PerfectLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		F883805E1BEBEA8600508D7F /* Linked */ = {
 			isa = PBXGroup;
 			children = (
-				F883805C1BEBEA7F00508D7F /* PerfectLib.framework */,
+				F80D5B731CC873D50025AD97 /* PerfectLib.framework */,
 			);
 			name = Linked;
 			sourceTree = "<group>";

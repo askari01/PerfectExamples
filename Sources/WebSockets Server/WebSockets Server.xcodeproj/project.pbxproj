@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F86BED0D1C3EEB390063C5A6 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86BED0C1C3EEB390063C5A6 /* PerfectLib.framework */; };
+		F80D5B721CC872800025AD97 /* PerfectLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D5B711CC872800025AD97 /* PerfectLib.framework */; };
 		F8933C4A1C3D97E10048EFE9 /* WebSockets Server.h in Headers */ = {isa = PBXBuildFile; fileRef = F8933C491C3D97E10048EFE9 /* WebSockets Server.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8933C4E1C3D97E10048EFE9 /* PerfectHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8933C4D1C3D97E10048EFE9 /* PerfectHandlers.swift */; };
 		F8933C581C3DC3390048EFE9 /* index.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8933C4B1C3D97E10048EFE9 /* index.html */; };
@@ -27,7 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F86BED0C1C3EEB390063C5A6 /* PerfectLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PerfectLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Examples-ebfeivyuaxcjnrhcezzfamsblphw/Build/Products/Debug/PerfectLib.framework"; sourceTree = "<group>"; };
+		F80D5B711CC872800025AD97 /* PerfectLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PerfectLib.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Perfect-aqyqkcamromvnnennplcqudglcko/Build/Products/Debug/PerfectLib.framework"; sourceTree = "<group>"; };
 		F8933C461C3D97E10048EFE9 /* WebSockets Server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "WebSockets Server.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8933C491C3D97E10048EFE9 /* WebSockets Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebSockets Server.h"; sourceTree = "<group>"; };
 		F8933C4B1C3D97E10048EFE9 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86BED0D1C3EEB390063C5A6 /* PerfectLib.framework in Frameworks */,
+				F80D5B721CC872800025AD97 /* PerfectLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 		F86BED0E1C3EEBC40063C5A6 /* Linked */ = {
 			isa = PBXGroup;
 			children = (
-				F86BED0C1C3EEB390063C5A6 /* PerfectLib.framework */,
+				F80D5B711CC872800025AD97 /* PerfectLib.framework */,
 			);
 			name = Linked;
 			sourceTree = "<group>";
@@ -75,9 +75,9 @@
 		F8933C481C3D97E10048EFE9 /* WebSockets Server */ = {
 			isa = PBXGroup;
 			children = (
+				F8933C4D1C3D97E10048EFE9 /* PerfectHandlers.swift */,
 				F8933C491C3D97E10048EFE9 /* WebSockets Server.h */,
 				F8933C4B1C3D97E10048EFE9 /* index.html */,
-				F8933C4D1C3D97E10048EFE9 /* PerfectHandlers.swift */,
 				F8933C4F1C3D97E10048EFE9 /* Info.plist */,
 			);
 			path = "WebSockets Server";

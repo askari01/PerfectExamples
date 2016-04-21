@@ -24,19 +24,16 @@ import PerfectLib
 // In here, register any handlers or perform any one-time tasks.
 public func PerfectServerModuleInit() {
 	
-	// Initialize the routing system
-	Routing.Handler.registerGlobally()
-	
 	// Add a default route which lets us serve the static index.html file
-	Routing.Routes["*"] = { _ in return StaticFileHandler() }
+	Routing.Routes["*"] = { request, response in StaticFileHandler().handleRequest(request, response: response) }
 	
 	// Add the endpoint for the WebSocket example system
 	Routing.Routes["GET", "/echo"] = {
-		_ in
+		request, response in
 		
 		// To add a WebSocket service, set the handler to WebSocketHandler.
 		// Provide your closure which will return your service handler.
-		return WebSocketHandler(handlerProducer: {
+		WebSocketHandler(handlerProducer: {
 			(request: WebRequest, protocols: [String]) -> WebSocketSessionHandler? in
 			
 			// Check to make sure the client is requesting our "echo" service.
@@ -46,7 +43,7 @@ public func PerfectServerModuleInit() {
 			
 			// Return our service handler.
 			return EchoHandler()
-		})
+		}).handleRequest(request, response: response)
 	}
 }
 
