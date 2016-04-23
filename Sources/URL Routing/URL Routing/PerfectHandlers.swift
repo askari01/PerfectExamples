@@ -24,16 +24,16 @@ import PerfectLib
 // In here, register any handlers or perform any one-time tasks.
 public func PerfectServerModuleInit() {
 	
-	Routing.Routes["GET", ["/", "index.html"] ] = { request, response in indexHandler(request, response) }
-	Routing.Routes["/foo/*/baz"] = { request, response in echoHandler(request, response) }
-	Routing.Routes["/foo/bar/baz"] = { request, response in echoHandler(request, response) }
-	Routing.Routes["GET", "/user/{id}/baz"] = { request, response in echo2Handler(request, response) }
-	Routing.Routes["GET", "/user/{id}"] = { request, response in echo2Handler(request, response) }
-	Routing.Routes["POST", "/user/{id}/baz"] = { request, response in echo3Handler(request, response) }
+	Routing.Routes["GET", ["/", "index.html"] ] = indexHandler
+	Routing.Routes["/foo/*/baz"] = echoHandler
+	Routing.Routes["/foo/bar/baz"] = echoHandler
+	Routing.Routes["GET", "/user/{id}/baz"] = echo2Handler
+	Routing.Routes["GET", "/user/{id}"] = echo2Handler
+	Routing.Routes["POST", "/user/{id}/baz"] = echo3Handler
 	
 	// Test this one via command line with curl:
 	// curl --data "{\"id\":123}" http://0.0.0.0:8181/raw --header "Content-Type:application/json"
-	Routing.Routes["POST", "/raw"] = { request, response in rawPOSTHandler(request, response) }
+	Routing.Routes["POST", "/raw"] = rawPOSTHandler
 	
 	// Check the console to see the logical structure of what was installed.
 	print("\(Routing.Routes.description)")
