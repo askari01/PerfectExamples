@@ -40,28 +40,28 @@ public func PerfectServerModuleInit() {
 }
 
 func indexHandler(request: WebRequest, _ response: WebResponse) {
-	response.appendBodyString("Index handler: You accessed path \(request.requestURI!)")
+	response.appendBody(string: "Index handler: You accessed path \(request.requestURI!)")
 	response.requestCompleted()
 }
 
 func echoHandler(request: WebRequest, _ response: WebResponse) {
-	response.appendBodyString("Echo handler: You accessed path \(request.requestURI!) with variables \(request.urlVariables)")
+	response.appendBody(string: "Echo handler: You accessed path \(request.requestURI!) with variables \(request.urlVariables)")
 	response.requestCompleted()
 }
 
 func echo2Handler(request: WebRequest, _ response: WebResponse) {
-	response.appendBodyString("<html><body>Echo 2 handler: You GET accessed path \(request.requestURI!) with variables \(request.urlVariables)<br>")
-	response.appendBodyString("<form method=\"POST\" action=\"/user/\(request.urlVariables["id"] ?? "error")/baz\"><button type=\"submit\">POST</button></form></body></html>")
+	response.appendBody(string: "<html><body>Echo 2 handler: You GET accessed path \(request.requestURI!) with variables \(request.urlVariables)<br>")
+	response.appendBody(string: "<form method=\"POST\" action=\"/user/\(request.urlVariables["id"] ?? "error")/baz\"><button type=\"submit\">POST</button></form></body></html>")
 	response.requestCompleted()
 }
 
 func echo3Handler(request: WebRequest, _ response: WebResponse) {
-	response.appendBodyString("<html><body>Echo 3 handler: You POSTED to path \(request.requestURI!) with variables \(request.urlVariables)</body></html>")
+	response.appendBody(string: "<html><body>Echo 3 handler: You POSTED to path \(request.requestURI!) with variables \(request.urlVariables)</body></html>")
 	response.requestCompleted()
 }
 
 func rawPOSTHandler(request: WebRequest, _ response: WebResponse) {
-	response.appendBodyString("<html><body>Raw POST handler: You POSTED to path \(request.requestURI!) with content-type \(request.contentType) and POST body \(request.postBodyString)</body></html>")
+	response.appendBody(string: "<html><body>Raw POST handler: You POSTED to path \(request.requestURI!) with content-type \(request.contentType) and POST body \(request.postBodyString)</body></html>")
 	response.requestCompleted()
 }
 

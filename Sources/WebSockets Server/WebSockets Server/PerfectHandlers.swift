@@ -25,7 +25,7 @@ import PerfectLib
 public func PerfectServerModuleInit() {
 	
 	// Add a default route which lets us serve the static index.html file
-	Routing.Routes["*"] = { request, response in StaticFileHandler().handleRequest(request, response: response) }
+	Routing.Routes["*"] = { request, response in StaticFileHandler().handleRequest(request: request, response: response) }
 	
 	// Add the endpoint for the WebSocket example system
 	Routing.Routes["GET", "/echo"] = {
@@ -43,7 +43,7 @@ public func PerfectServerModuleInit() {
 			
 			// Return our service handler.
 			return EchoHandler()
-		}).handleRequest(request, response: response)
+		}).handleRequest(request: request, response: response)
 	}
 }
 
@@ -93,11 +93,11 @@ class EchoHandler: WebSocketSessionHandler {
 			// For example, if one were streaming a large file such as a video, one would pass false for final.
 			// This indicates to the receiver that there is more data to come in subsequent messages but that all the data is part of the same logical message.
 			// In such a scenario one would pass true for final only on the last bit of the video.
-			socket.sendStringMessage(string, final: true) {
+			socket.sendStringMessage(string: string, final: true) {
 				
 				// This callback is called once the message has been sent.
 				// Recurse to read and echo new message.
-				self.handleSession(request, socket: socket)
+				self.handleSession(request: request, socket: socket)
 			}
 		}
 	}

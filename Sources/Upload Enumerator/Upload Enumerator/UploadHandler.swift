@@ -29,10 +29,10 @@ public func PerfectServerModuleInit() {
 		
 		let webRoot = request.documentRoot
 		do {
-			try mustacheRequest(request, response: response, handler: UploadHandler(), path: webRoot + "/index.mustache")
+			try mustacheRequest(request: request, response: response, handler: UploadHandler(), path: webRoot + "/index.mustache")
 		} catch {
-			response.setStatus(500, message: "Server Error")
-			response.appendBodyString("\(error)")
+			response.setStatus(code: 500, message: "Server Error")
+			response.appendBody(string: "\(error)")
 		}
 		response.requestCompleted()
 	}
