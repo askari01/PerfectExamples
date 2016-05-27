@@ -24,16 +24,16 @@ import PerfectLib
 // In here, register any handlers or perform any one-time tasks.
 public func PerfectServerModuleInit() {
 	
-	Routing.Routes["GET", ["/", "index.html"] ] = indexHandler
+	Routing.Routes[.Get, ["/", "index.html"] ] = indexHandler
 	Routing.Routes["/foo/*/baz"] = echoHandler
 	Routing.Routes["/foo/bar/baz"] = echoHandler
-	Routing.Routes["GET", "/user/{id}/baz"] = echo2Handler
-	Routing.Routes["GET", "/user/{id}"] = echo2Handler
-	Routing.Routes["POST", "/user/{id}/baz"] = echo3Handler
+	Routing.Routes[.Get, "/user/{id}/baz"] = echo2Handler
+	Routing.Routes[.Get, "/user/{id}"] = echo2Handler
+	Routing.Routes[.Post, "/user/{id}/baz"] = echo3Handler
 	
 	// Test this one via command line with curl:
 	// curl --data "{\"id\":123}" http://0.0.0.0:8181/raw --header "Content-Type:application/json"
-	Routing.Routes["POST", "/raw"] = rawPOSTHandler
+	Routing.Routes[.Post, "/raw"] = rawPOSTHandler
 	
 	// Check the console to see the logical structure of what was installed.
 	print("\(Routing.Routes.description)")
