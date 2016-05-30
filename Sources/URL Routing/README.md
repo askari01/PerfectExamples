@@ -7,7 +7,7 @@ In your `PerfectServerModuleInit` function, which all Perfect modules must have,
 
 The following code is taken from the example project and shows how to enable the system and add routes.
 
-```
+```swift
 public func PerfectServerModuleInit() {
 	
 	// Install the built-in routing handler.
@@ -28,7 +28,7 @@ public func PerfectServerModuleInit() {
 
 The example `EchoHandler` consists of the following.
 
-```
+```swift
 class EchoHandler: RequestHandler {
 	
 	func handleRequest(request: WebRequest, response: WebResponse) {
@@ -41,7 +41,7 @@ class EchoHandler: RequestHandler {
 ## Using Apache
 The following Apache conf snippet can be used to pipe requests for non-existent files through to Perfect when using the URL routing system.
 
-```
+```apacheconf
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
