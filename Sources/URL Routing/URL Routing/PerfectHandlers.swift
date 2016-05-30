@@ -35,6 +35,9 @@ public func PerfectServerModuleInit() {
 	// curl --data "{\"id\":123}" http://0.0.0.0:8181/raw --header "Content-Type:application/json"
 	Routing.Routes[.Post, "/raw"] = rawPOSTHandler
 	
+    // Trailing wildcard matches any path
+    Routing.Routes["**"] = echo4Handler
+    
 	// Check the console to see the logical structure of what was installed.
 	print("\(Routing.Routes.description)")
 }
@@ -58,6 +61,11 @@ func echo2Handler(request: WebRequest, _ response: WebResponse) {
 func echo3Handler(request: WebRequest, _ response: WebResponse) {
 	response.appendBody(string: "<html><body>Echo 3 handler: You POSTED to path \(request.requestURI!) with variables \(request.urlVariables)</body></html>")
 	response.requestCompleted()
+}
+
+func echo4Handler(request: WebRequest, _ response: WebResponse) {
+    response.appendBody(string: "<html><body>Echo 4 (trailing wildcard) handler: You accessed path \(request.requestURI!)</body></html>")
+    response.requestCompleted()
 }
 
 func rawPOSTHandler(request: WebRequest, _ response: WebResponse) {

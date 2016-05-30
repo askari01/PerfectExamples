@@ -24,7 +24,7 @@ import PerfectLib
 // In here, register any handlers or perform any one-time tasks.
 public func PerfectServerModuleInit() {
 	
-	Routing.Routes["*"] = {
+	Routing.Routes["/"] = {
 		request, response in
 		
 		let webRoot = request.documentRoot
