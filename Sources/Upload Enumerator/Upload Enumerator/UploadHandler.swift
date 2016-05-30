@@ -24,15 +24,15 @@ import PerfectLib
 // In here, register any handlers or perform any one-time tasks.
 public func PerfectServerModuleInit() {
 	
-	Routing.Routes["*"] = {
+	Routing.Routes["/"] = {
 		request, response in
 		
 		let webRoot = request.documentRoot
 		do {
-			try mustacheRequest(request, response: response, handler: UploadHandler(), path: webRoot + "/index.mustache")
+			try mustacheRequest(request: request, response: response, handler: UploadHandler(), path: webRoot + "/index.mustache")
 		} catch {
-			response.setStatus(500, message: "Server Error")
-			response.appendBodyString("\(error)")
+			response.setStatus(code: 500, message: "Server Error")
+			response.appendBody(string: "\(error)")
 		}
 		response.requestCompleted()
 	}
@@ -47,13 +47,13 @@ struct UploadHandler: MustachePageHandler { // all template handlers must inheri
 	// It is called by the system to allow the handler to return the set of values which will be used when populating the template.
 	// - parameter context: The MustacheEvaluationContext which provides access to the WebRequest containing all the information pertaining to the request
 	// - parameter collector: The MustacheEvaluationOutputCollector which can be used to adjust the template output. For example a `defaultEncodingFunc` could be installed to change how outgoing values are encoded.
-	func valuesForResponse(context: MustacheEvaluationContext, collector: MustacheEvaluationOutputCollector) throws -> MustacheEvaluationContext.MapType {
-
+	func valuesForResponse(context contxt: MustacheEvaluationContext, collector: MustacheEvaluationOutputCollector) throws -> MustacheEvaluationContext.MapType {
+	#if DEBUG
 		print("UploadHandler got request")
-		
+	#endif
 		var values = MustacheEvaluationContext.MapType()
 		// Grab the WebRequest so we can get information about what was uploaded
-		if let request = context.webRequest {
+		if let request = contxt.webRequest {
 			// Grab the fileUploads array and see what's there
 			// If this POST was not multi-part, then this array will be empty
 			let uploads = request.fileUploads

@@ -81,18 +81,19 @@
    <ProfileAction
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = ""
+      savedToolIdentifier = "/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/templates/Counters.tracetemplate"
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F883804E1BEBE57A00508D7F"
-            BuildableName = "Upload Enumerator Server.framework"
-            BlueprintName = "Upload Enumerator Server"
-            ReferencedContainer = "container:Upload Enumerator.xcodeproj">
+            BlueprintIdentifier = "F8E752DE1BDA8A7600BFC36A"
+            BuildableName = "perfectserverhttp"
+            BlueprintName = "PerfectServer HTTP"
+            ReferencedContainer = "container:../../../PerfectServer/Xcode/PerfectServer/PerfectServer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
