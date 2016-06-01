@@ -1,0 +1,9 @@
+[submodule "PerfectExample-UploadEnumerator"]
+	path = PerfectExample-UploadEnumerator
+	url = https://github.com/PerfectlySoft/PerfectExample-UploadEnumerator.git
+[submodule "PerfectExample-URLRouting"]
+	path = PerfectExample-URLRouting
+	url = https://github.com/PerfectlySoft/PerfectExample-URLRouting.git
+[submodule "PerfectExample-WebSocketsServer"]
+	path = PerfectExample-WebSocketsServer
+	url = https://github.com/PerfectlySoft/PerfectExample-WebSocketsServer.git
