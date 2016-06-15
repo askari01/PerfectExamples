@@ -12,3 +12,4 @@ All of these examples build with Swift Package Manager. Consult the individual R
 * [Upload Enumerator](https://github.com/PerfectlySoft/PerfectExample-UploadEnumerator)
 * [URL Routing](https://github.com/PerfectlySoft/PerfectExample-URLRouting)
 * [WebSockets Server](https://github.com/PerfectlySoft/PerfectExample-WebSocketsServer)
+* [Ultimate Naughts &amp; Crosses](https://github.com/PerfectlySoft/Perfect-UltimateNaughtsAndCrosses.git)
