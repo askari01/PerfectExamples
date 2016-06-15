@@ -7,3 +7,6 @@
 [submodule "PerfectExample-WebSocketsServer"]
 	path = PerfectExample-WebSocketsServer
 	url = https://github.com/PerfectlySoft/PerfectExample-WebSocketsServer.git
+[submodule "Perfect-UltimateNaughtsAndCrosses"]
+	path = Perfect-UltimateNaughtsAndCrosses
+	url = https://github.com/PerfectlySoft/Perfect-UltimateNaughtsAndCrosses.git
